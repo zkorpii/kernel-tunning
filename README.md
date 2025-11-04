@@ -6,6 +6,9 @@ Configurações para kernel
 ### Sysfs
  - cpu-conservative.conf (/etc/sysfs.d/cpu-conservative.conf)
 
+## Sysctl
+ - 43-writeback.conf (/etc/sysctl.d/43-writeback.conf)
+
 ### Para adicionar módulos ao initramfs:
 Primeiro abra o arquivo de módulos do initramfs:
 

@@ -1,15 +1,18 @@
 # kernel-tunning
 
 Configurações para kernel
-## Lista de configurações:
 
-### Sysfs
- - cpu-conservative.conf (/etc/sysfs.d/cpu-conservative.conf)
+## Sysfs
+
+- cpu-conservative.conf (/etc/sysfs.d/cpu-conservative.conf)
 
 ## Sysctl
- - 43-writeback.conf (/etc/sysctl.d/43-writeback.conf)
 
-### Para adicionar módulos ao initramfs:
+- 43-writeback.conf (/etc/sysctl.d/43-writeback.conf)
+- 99-swappiness.conf (/etc/sysctl.d/99-swappiness.conf)
+
+### Para adicionar módulos ao initramfs
+
 Primeiro abra o arquivo de módulos do initramfs:
 
 ```sh
@@ -22,4 +25,10 @@ feche e execute o comando para a atualização do initramfs para todos os kernel
 
 ```sh
 sudo update-initramfs -u -k all
+```
+
+## Para adicionar configurações novas ao sysctl
+
+```sh
+sudo sysctl --system
 ```
